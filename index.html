@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="weather-app">
+        <div class="header">
+            <div class="container">
+                <div class="search"><i class="fa fa-search"></i><input type="text" placeholder="enter city name" id="search"></div>
+                <div class="theme"><i class="fa fa-light fa-sun" onclick="light()"></i>
+                    <i class="fa fa-light fa-circle-half-stroke" style="display:none;" onclick="dark()"></i>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="section-container">
+                    <div class="head">
+                        <span class="temp">28 &deg;C</span>
+                        <img src="/images/clouds.png" alt="" class="weather-img" /></div>
+                    <div class="city-date">
+                        <h3 class="city">Rabat</h3>
+                        <div class="date"></div>
+                    </div>
+
+
+                    <div class="footer">
+                        <div class="humu"><span>
+                        humidty:</span><span class="humidity"></span></div>
+                        <div class="min-max"><span class="min"></span><i class="fa fa-light fa-caret-down"></i><span class="max"></span><i class="fa fa-caret-up"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+        <script>
+            let date = new Date().toLocaleDateString('en-CA');
+            document.querySelector(".date").innerHTML = date;
+        </script>
+</body>
+
+</html>
